@@ -4,90 +4,203 @@
 <head>
 
     <h1 style="color:rgb(73, 16, 90);font-size:50px;text-shadow:2px 2px rgb(64, 153, 64);">JOB HUNT    </h1>
-    <button type="home" onclick="backHome()">HomePage</button>
+        
 
         </head>
+         <button style="font-size:15px;" id="login" onclick="loginForm()">Log in</button>
+         <button style="font-size:15px;" id="hide" onclick="hideForm()"> Sign Up</button><br>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<h2 style="align-content: center">Sign In With Job Hunt Account </h2>
-<style>
-    Input[type=text],[type=password], select {
-    width: 20%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    }
-</style>
-<body>
-
-Email Address: <br>
-<input type="text" name="email" placeholder="Your Email Address"><br>
-Password: <br>
- <input type="password" name="pass" placeholder="Your Password"><br>
- <input type="submit" onclick="signInForm()" value="sign in">
-
- <style>
-
-                     input[type=submit]{
-                     width: 20%;
-                     background-color: #4CAF50;
-                     color: white;
-                     padding: 14px 20px;
-                     margin: 8px 0;
-                     border: none;
-                     border-radius: 4px;
-                     cursor: pointer;
+        <style>
+                input[type=text],[type=password],[type=month],[type=number], select {
+                  width: 20%;
+                  padding: 12px 20px;
+                  margin: 8px 0;
+                  display: inline-block;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                  box-sizing: border-box;
                 }
-                    .fa {
-                    padding: 20px;
-                    font-size: 30px;
-                    width: 30px;
-                    text-align: center;
-                    text-decoration: none;
-                    margin: 5px 2px;
-                    border-radius: 50%;
-                    }
-                    
-                    .fa:hover {
-                        opacity: 0.7;
-                    }
-                    
-                    .fa-facebook {
-                    background: #3B5998;
-                    color: white;
-                    }
-                    
-                    .fa-twitter {
-                    background: #55ACEE;
-                    color: white;
-                    }
-                    
-                    .fa-google {
-                    background: #dd4b39;
-                    color: white;
-                    }
-                    
-                    .fa-linkedin {
-                    background: #007bb5;
-                    color: white;
-                    }
-        </style>
-        <h2 style="color: grey;"> or Sign In Using </h2>
-        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-        <a href="https://twitter.com/" class="fa fa-twitter"></a>
-        <a href="https://plus.google.com" class="fa fa-google"></a>
-        <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
-        <br><br><br>
+                
+                input[type=submit]{
+                  width: 20%;
+                  background-color: #4CAF50;
+                  color: white;
+                  padding: 14px 20px;
+                  margin: 8px 0;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+                }
+                
+                input[type=submit]:hover {
+                  background-color: #45a049;
+                }
 
-        <script>
-        function signInForm(){
-        alert("Message from The Developer! This website is not completly build, It will be in market Soon. Sorry for any inconvenience");
-      };
+                input[type=search]{
+                  width: 10%;
+                  background-color: rgb(114, 21, 138);
+                  color: white;
+                  padding: 14px 20px;
+                  margin: 8px 0;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+                  font-size: 15px;
+                  
+                }
 
-        function backHome(){
-        location.href = "./registration.html";
+                div {
+                  border-radius: 5px;
+                  background-color: #f2f2f2;
+                  padding: 20px;
+                }
+
+                
+                </style>
+
+
+<body background="https://wallpaper.wiki/wp-content/uploads/2017/05/Color-Wallpapers-HD-Free-Download.jpg">
+
+
+    <style>
+            .fa {
+              padding: 20px;
+              font-size: 30px;
+              width: 30px;
+              text-align: center;
+              text-decoration: none;
+              margin: 5px 2px;
+              border-radius: 50%;
+            }
+            
+            .fa:hover {
+                opacity: 0.7;
+            }
+            
+            .fa-facebook {
+              background: #3B5998;
+              color: white;
+            }
+            
+            .fa-twitter {
+              background: #55ACEE;
+              color: white;
+            }
+            
+            .fa-google {
+              background: #dd4b39;
+              color: white;
+            }
+            
+            .fa-linkedin {
+              background: #007bb5;
+              color: white;
+            }
+            </style>
+            <h2 style="color: whitesmoke;"> or sign up using </h2>
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/" class="fa fa-twitter"></a>
+            <a href="https://plus.google.com" class="fa fa-google"></a>
+            <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+            <br><br><br>
+
+<div id="myDiv" style="display:none">
+    <form id="myForm">
+            First name: <input type="text" name="fname" placeholder="john"><br>
+            last  name : <input type="text" name="sname" placeholder="smith"><br>
+            Date of Birth : <input type="month" name="birth" placeholder="Decemner 1990"><br>
+            Email address : <input type="text" name="email" placeholder="john.smith@email.com"><br>
+            Username : <input type="text" name="uname" placeholder="johnsmith123"><br>
+            ZipCode: <input type = "number" placeholder="74820"><br> 
+            Create Password : <input type="password" name="pass" placeholder="Password"><br>
+            Re-type Password : <input type="password" name="rpass" placeholder=" Re-type Password"><br>
+ 
+
+<p style="font-size:20px;">Security Questions </p>
+
+<li>
+    City You were Born : <input type="text" name="securitya" placeholder="Dallas"><br>
+</li>
+<li>
+    Mothers Maiden Name : <input type="text" name="securityb" placeholder="Peterson"><br>
+</li>
+<input onload="myFunction()"type="file" id="myFile" multiple size="50" onchange="myFunction()">
+<p id="demo"></p>
+<input type="submit" onclick="submitForm()" value="Submit form">
+</form>
+
+
+</div>
+
+
+<h1 style="color: honeydew">Find Better</h1>
+
+<p style="color: honeydew">Job Hunt can help you find the best jobs, employers and career advice.</p>
+
+<input type="text" name="Search" placeholder="Keyword or Title">
+<input type="text" name="fname" placeholder="Location">
+<input type="search" onclick="findJobs()" placeholder="Find Jobs"><br>
+
+<input onload="myFunction()"type="file" id="myFile" multiple size="50" onchange="myFunction()">
+<p id="demo"> </p>
+<p style="color: honeydew">- Upload your resume for a free professional assessment</p>
+
+
+<script>
+
+function hideForm() {
+  var x = document.getElementById("myDiv");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+};
+
+    function submitForm() {
+     document.getElementById("myForm").submit();
+   alert("Your form has been sucessfully Submitted");
+    };
+
+    function loginForm(){
+        location.href = "./login.html";
+    };
+
+    function findJobs(){
+        location.href = "https://www.monster.com/jobs/nocriteria/";
+    };
+
+function myFunction(){
+  var x = document.getElementById("myFile");
+  var txt = "";
+  if ('files' in x) {
+    if (x.files.length == 0) {
+      txt = "Select one or more files.";
+    } else {
+      for (var i = 0; i < x.files.length; i++) {
+        txt += "<br><strong>" + (i+1) + ". file</strong><br>";
+        var file = x.files[i];
+        if ('name' in file) {
+          txt += "name: " + file.name + "<br>";
         }
-        </script>
-        
+        if ('size' in file) {
+          txt += "size: " + file.size + " bytes <br>";
+        }
+      }
+    }
+  } 
+  else {
+    if (x.value == "") {
+      txt += "Select one or more files.";
+    } else {
+      txt += "The files property is not supported by your browser!";
+      txt  += "<br>The path of the selected file: " + x.value; 
+    }
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+    </script>
+</body>
+</html>
