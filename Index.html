@@ -1,14 +1,13 @@
-<!DOCTYPE html>
+<! DOCTYPE html>
 <html>
 
 <head>
-
-    <h1 style="color:rgb(73, 16, 90);font-size:50px;text-shadow:2px 2px rgb(64, 153, 64);">JOB HUNT    </h1>
-        
-
+  <img src="./Jobhunt logo.png">
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+     
+   
+     <button onclick="dark()">Night mode</button>
         </head>
-         <button style="font-size:15px;" id="login" onclick="loginForm()">Log in</button>
-         <button style="font-size:15px;" id="hide" onclick="hideForm()"> Sign Up</button><br>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
                 input[type=text],[type=password],[type=month],[type=number], select {
@@ -23,7 +22,7 @@
                 
                 input[type=submit]{
                   width: 20%;
-                  background-color: #4CAF50;
+                  background-color: rgb(180, 87, 33);
                   color: white;
                   padding: 14px 20px;
                   margin: 8px 0;
@@ -32,14 +31,11 @@
                   cursor: pointer;
                 }
                 
-                input[type=submit]:hover {
-                  background-color: #45a049;
-                }
+            
 
                 input[type=search]{
                   width: 10%;
-                  background-color: rgb(114, 21, 138);
-                  color: white;
+                  background-color: rgb(230, 127, 10);
                   padding: 14px 20px;
                   margin: 8px 0;
                   border: none;
@@ -59,8 +55,9 @@
                 </style>
 
 
-<body background="https://wallpaper.wiki/wp-content/uploads/2017/05/Color-Wallpapers-HD-Free-Download.jpg">
-
+<body >
+    <button style="font-size:15px;" id="login" onclick="loginForm()">Log in</button>
+    <button style="font-size:15px;" id="hide" onclick="hideForm()"> Sign Up</button><br>
 
     <style>
             .fa {
@@ -97,7 +94,7 @@
               color: white;
             }
             </style>
-            <h2 style="color: whitesmoke;"> or sign up using </h2>
+            <h2 style="color: orange;"> or sign up using </h2>
             <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
             <a href="https://twitter.com/" class="fa fa-twitter"></a>
             <a href="https://plus.google.com" class="fa fa-google"></a>
@@ -105,16 +102,15 @@
             <br><br><br>
 
 <div id="myDiv" style="display:none">
-    <form id="myForm">
+    <form id="myForm" action="userinfo.php" method="POST">
             First name: <input type="text" name="fname" placeholder="john"><br>
             last  name : <input type="text" name="sname" placeholder="smith"><br>
             Date of Birth : <input type="month" name="birth" placeholder="Decemner 1990"><br>
             Email address : <input type="text" name="email" placeholder="john.smith@email.com"><br>
             Username : <input type="text" name="uname" placeholder="johnsmith123"><br>
-            ZipCode: <input type = "number" placeholder="74820"><br> 
+            ZipCode: <input type = "number" name="zipcode" placeholder="74820"><br> 
             Create Password : <input type="password" name="pass" placeholder="Password"><br>
             Re-type Password : <input type="password" name="rpass" placeholder=" Re-type Password"><br>
- 
 
 <p style="font-size:20px;">Security Questions </p>
 
@@ -126,16 +122,15 @@
 </li>
 <input onload="myFunction()"type="file" id="myFile" multiple size="50" onchange="myFunction()">
 <p id="demo"></p>
-<input type="submit" onclick="submitForm()" value="Submit form">
+<button id="sub" onclick="submit()">Submit</button>
 </form>
-
 
 </div>
 
 
-<h1 style="color: honeydew">Find Better</h1>
+<h1 style="color: orange">Find Better</h1>
 
-<p style="color: honeydew">Job Hunt can help you find the best jobs, employers and career advice.</p>
+<p style="color: orange">Job Hunt can help you find the best jobs, employers and career advice.</p>
 
 <input type="text" name="Search" placeholder="Keyword or Title">
 <input type="text" name="fname" placeholder="Location">
@@ -143,7 +138,7 @@
 
 <input onload="myFunction()"type="file" id="myFile" multiple size="50" onchange="myFunction()">
 <p id="demo"> </p>
-<p style="color: honeydew">- Upload your resume for a free professional assessment</p>
+<p style="color: orange">- Upload your resume for a free professional assessment</p>
 
 
 <script>
@@ -157,10 +152,17 @@ function hideForm() {
   }
 };
 
-    function submitForm() {
-     document.getElementById("myForm").submit();
-   alert("Your form has been sucessfully Submitted");
-    };
+function submit(){
+  post=myfrom;
+}
+//$("#sub").click(function(){
+
+//$.post($("#myform").attr("action"), $("#myform:input").serializeArray(), function(info){$("#result").html(info);});
+//});
+
+//$("#myform").submit(function(){
+//return false;
+//});
 
     function loginForm(){
         location.href = "./login.html";
@@ -199,8 +201,19 @@ function myFunction(){
   }
   document.getElementById("demo").innerHTML = txt;
 }
-</script>
+function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
 
-    </script>
+                document.body.style.backgroundColor = '#333';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+        }
+    }
+        
+</script>
+    
+
+   
 </body>
 </html>
