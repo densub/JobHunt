@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html>
-
+<html style="background-color:#333">
+    <style>
+        .content {
+       max-width: 500px;
+       margin: auto;
+       background:grey;
+       padding: 40px;
+        }
+      </style> 
+  
+<div class="content">
 <head>
   <img src="./Jobhunt logo.png">
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
      
    
-     <button onclick="dark()">Night mode</button>
         </head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
                 input[type=text],[type=password],[type=month],[type=number], select {
-                  width: 20%;
+                  width: 50%;
                   padding: 12px 20px;
                   margin: 8px 0;
                   display: inline-block;
@@ -34,7 +42,7 @@
             
 
                 input[type=search]{
-                  width: 10%;
+                  width: 50%;
                   background-color: rgb(230, 127, 10);
                   padding: 14px 20px;
                   margin: 8px 0;
@@ -50,9 +58,11 @@
                   background-color: #f2f2f2;
                   padding: 20px;
                 }
+                
 
                 
                 </style>
+                
 
 
 <body >
@@ -61,7 +71,7 @@
 
     <style>
             .fa {
-              padding: 20px;
+              padding: 8px;
               font-size: 30px;
               width: 30px;
               text-align: center;
@@ -94,7 +104,7 @@
               color: white;
             }
             </style>
-            <h2 style="color: orange;"> or sign up using </h2>
+            <h2 style="color: orange;"> or continue with </h2>
             <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
             <a href="https://twitter.com/" class="fa fa-twitter"></a>
             <a href="https://plus.google.com" class="fa fa-google"></a>
@@ -132,9 +142,9 @@
 
 <p style="color: orange">Job Hunt can help you find the best jobs, employers and career advice.</p>
 
-<input type="text" name="Search" placeholder="Keyword or Title">
-<input type="text" name="fname" placeholder="Location">
-<input type="search" onclick="findJobs()" placeholder="Find Jobs"><br>
+<input type="text" name="Search" placeholder="Keyword or Title" class="input">
+<br><input type="text" name="fname" placeholder="Location" class="input">
+<br><input type="search" onclick="findJobs()" placeholder="Find Jobs"><br>
 
 <input onload="myFunction()"type="file" id="myFile" multiple size="50" onchange="myFunction()">
 <p id="demo"> </p>
@@ -201,19 +211,8 @@ function myFunction(){
   }
   document.getElementById("demo").innerHTML = txt;
 }
-function dark() {
-        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
-
-                document.body.style.backgroundColor = '#333';
-        }
-        else {
-                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
-        }
-    }
         
 </script>
-    
-
-   
 </body>
+</div>
 </html>
